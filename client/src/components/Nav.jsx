@@ -1,20 +1,22 @@
 import { NavLink } from 'react-router-dom';
 
-const Nav = () => {
+const Nav = (props) => {
 
-    const toggleOverlay = () => {
-        
-    }
+
 
     return (
       <div className="nav">
         <div className="headline">Steven Gaona | Software Developer</div>
-        <div className="nav-links">
-          <NavLink>Projects</NavLink>
+        <div className='nav-links-ham'>
+          <div className="nav-links">
+          {/* <NavLink>Projects</NavLink>
           <NavLink>LinkedIn</NavLink>
-          <NavLink>GitHub</NavLink>
+          <NavLink>GitHub</NavLink> */}
+          <div>Projects</div>
+          <div>LinkedIn</div>
+          <div>GitHub</div>
         </div>
-        <button className="hamburger" type='button' >
+        <button className="hamburger" type='button' onClick={props.toggleOverlay}>
           <svg
             width="24"
             height="24"
@@ -31,6 +33,8 @@ const Nav = () => {
             <line x1="3" y1="18" x2="21" y2="18" />
           </svg>
         </button>
+        </div>
+        
       </div>
     );
 }
