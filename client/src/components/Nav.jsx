@@ -9,12 +9,9 @@ const Nav = (props) => {
         <div className="headline">Steven Gaona | Software Developer</div>
         <div className='nav-links-ham'>
           <div className="nav-links">
-          {/* <NavLink>Projects</NavLink>
+          <NavLink>Projects</NavLink>
           <NavLink>LinkedIn</NavLink>
-          <NavLink>GitHub</NavLink> */}
-          <div>Projects</div>
-          <div>LinkedIn</div>
-          <div>GitHub</div>
+          <NavLink>GitHub</NavLink>
         </div>
         <button className="hamburger" type='button' onClick={props.toggleOverlay}>
           <svg
