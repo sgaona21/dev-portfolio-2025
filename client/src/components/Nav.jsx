@@ -9,9 +9,9 @@ const Nav = (props) => {
         <div className="headline">Steven Gaona | Software Developer</div>
         <div className='nav-links-ham'>
           <div className="nav-links">
-          <NavLink>Projects</NavLink>
-          <NavLink>LinkedIn</NavLink>
-          <NavLink>GitHub</NavLink>
+          <NavLink to='#projects' >Projects</NavLink>
+          <NavLink to="https://www.linkedin.com/in/steven-gaona-76a943126/" target="_blank" rel="noopener noreferrer">LinkedIn</NavLink>
+          <NavLink to='https://github.com/sgaona21' target="_blank" rel="noopener noreferrer">GitHub</NavLink>
         </div>
         <button className="hamburger" type='button' onClick={props.toggleOverlay}>
           <svg

@@ -33,7 +33,7 @@ const Projects = ({ children }) => {
 
     return (
         <div>
-            <h1>My Projects</h1>
+            <h1 id="projects">My Projects</h1>
 
             <div className="projects-container" ref={containerRef} >
                 <div className="thumbnail">

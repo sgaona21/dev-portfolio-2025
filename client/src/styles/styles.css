@@ -4,7 +4,7 @@
     padding: 0;
     list-style: none;
     text-decoration: none;
-    color: rgba(255, 255, 255, 0.482)
+    color: rgba(255, 255, 255, 0.718)
 }
 
 :root {
@@ -36,10 +36,10 @@ body::before {
   pointer-events: none;
   z-index: 0; /* above body background, under your content */
   background:
-    radial-gradient(900px 600px at 30% 60%, rgba(255,255,255,0.07), transparent 60%),
-    radial-gradient(700px 500px at 60% 30%, rgba(24, 61, 179, 0.1), transparent 90%),
-    radial-gradient(600px 450px at 60% 70%, rgba(36, 198, 33, 0.1), transparent 90%);
-  filter: blur(20px);
+    radial-gradient(900px 600px at 30% 70%, rgba(176, 172, 172, 0.15), transparent 60%),
+    radial-gradient(700px 500px at 50% 40%, rgba(199, 194, 194, 0.15), transparent 60%),
+    radial-gradient(600px 450px at 60% 75%, rgba(173, 171, 171, 0.15), transparent 60%);
+  filter: blur(50px);
   opacity: 0.9;
   animation: drift 60s ease-in-out infinite alternate;
   will-change: transform;
@@ -52,7 +52,7 @@ body::before {
 }
 
 /* crank speed so you can see it */
-body::before { animation-duration: 5s; }
+body::before { animation-duration: 6s; }
 
 
 
@@ -67,7 +67,7 @@ body::before { animation-duration: 5s; }
     display: flex;
     justify-content: space-between;
     margin: auto;
-    max-width: 950px;
+    max-width: 1100px;
     
 }
 
@@ -184,7 +184,7 @@ h1 {
 }
 
 .thumbnail {
-    border: solid 2px;
+    border: 1px solid rgba(245, 245, 245, 0.081);
     margin-bottom: 1rem;
     width: 90%;
     border-radius: 20px;
@@ -204,10 +204,14 @@ h1 {
     padding: .75rem;
     border-radius: 25px;
     border: none;
+    background: #0b0f14;
+    border: 1px solid rgba(245, 245, 245, 0.232);
 }
 
 .button-wrapper button:hover {
     cursor: pointer;
+    color: black;
+    background-color: rgba(245, 245, 245, 0.834)
 }
 
 
@@ -274,9 +278,11 @@ h1 {
 /* TECHSTACK ORBIT */
 .orbit {
   --gap: 1.25rem;
-  --speed: 30s;
+  --speed: 60s;
   overflow: hidden;
-  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 25%, black 90%, transparent);
+  max-width: 1100px;
+  margin: auto;
 }
 
 .orbit__track {
@@ -290,26 +296,30 @@ h1 {
 
 /* The black background wrapper */
 .orbit__item {
-  background: #000;
-  padding: 1rem;  
-  margin: 2rem;            /* space around the image */
-  border-radius: 12px;
-  overflow: hidden;          /* keeps rounded corners clean */
-  height: 100px;             /* pick a consistent size */
-  aspect-ratio: 4 / 3;       /* keeps a nice card shape */
-  display: grid;             /* centers image if aspect differs */
-  place-items: center;
-  flex: 0 0 auto;            /* don't shrink in the flex row */
+  background: #111111cd;
+  display: flex;
+  width: 60px;
+  border-radius: 15px;
+  justify-content: center;
+  align-items: center;
+  padding: .75rem;
+  margin-right: 2rem;
 }
 
 /* The image itself */
 .orbit__item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;         /* fill & crop nicely */
-  display: block;
-  border-radius: 8px;        /* optional: soften inner image slightly */
+  max-width: 100%;         
 }
+
+.orbit__track .orbit__item:nth-child(2), .orbit__track .orbit__item:nth-child(8) { 
+    padding: .1rem;
+ }
+ .orbit__track .orbit__item:nth-child(5), .orbit__track .orbit__item:nth-child(11) { 
+    padding: 1.15rem;
+ }
+  .orbit__track .orbit__item:nth-child(3), .orbit__track .orbit__item:nth-child(9) { 
+    padding: 1rem;
+ }
 
 @keyframes orbit-scroll {
   to { transform: translateX(-50%); }
@@ -402,15 +412,39 @@ h1 {
     .thumbnail h2, .thumbnail p {
         width: 75%;
     }
+
+
+
+        .orbit__item {
+            background: #111111cd;
+            display: flex;
+            width: 75px;
+            border-radius: 25px;
+            justify-content: center;
+            align-items: center;
+            padding: .75rem;
+            margin-right: 4rem;
+        }
    
     
     
 }
 
 /* Desktop View */
-@media (min-width: 1024px) { 
+@media (min-width: 1024px) {
 
-    
+    .orbit__item {
+        background: #111111cd;
+        display: flex;
+        width: 75px;
+        border-radius: 25px;
+        justify-content: center;
+        align-items: center;
+        padding: .75rem;
+        margin-right: 4rem;
+    }
+
+
 
 }
 

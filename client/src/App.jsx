@@ -1,4 +1,5 @@
 import './styles/styles.css';
+import { Routes, Route} from "react-router-dom";
 import { useState } from 'react';
 
 //Components 
@@ -19,6 +20,9 @@ function App() {
       </header>
 
       <main>
+        <Routes>
+          <Route path="/projects" element={<Projects />} />
+        </Routes>
         <TechStackOrbit />
         <Projects />
       </main>
