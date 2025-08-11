@@ -37,7 +37,7 @@ const Projects = ({ children }) => {
 
             <div className="projects-container" ref={containerRef} >
                 <div className="thumbnail">
-                    <h2>Paid.com</h2>
+                    <h2>paid-web-app</h2>
                     <p>With user-centered approach, the goals was to create an intuitive interface for effortless financial management while incorporating gamification.</p>
                     <div className='button-wrapper'>
                         <button>Live Site</button>
