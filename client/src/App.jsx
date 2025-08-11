@@ -5,6 +5,7 @@ import { useState } from 'react';
 import Nav from './components/Nav';
 import Overlay from './components/Overlay';
 import Projects from './components/Projects';
+import TechStackOrbit from './components/TechStackOrbit';
 
 function App() {
   const [overlayOpen, setOverlayOpen] = useState(true)
@@ -18,6 +19,7 @@ function App() {
       </header>
 
       <main>
+        <TechStackOrbit />
         <Projects />
       </main>
 
