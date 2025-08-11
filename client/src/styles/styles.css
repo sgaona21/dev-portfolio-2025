@@ -6,6 +6,50 @@
     text-decoration: none;
 }
 
+
+body {
+  background: linear-gradient(180deg, #0b0b10, #050508);
+  background-attachment: fixed;
+  color: #e9eef2;
+}
+
+/* content sits above this */
+.main-grid { position: relative; z-index: 1; }
+
+/* animated glow layer */
+body::before {
+  content: "";
+  position: fixed;
+  inset: -12%;
+  pointer-events: none;
+  z-index: 0; /* above body background, under your content */
+  background:
+    radial-gradient(900px 600px at 30% 60%, rgba(255,255,255,0.07), transparent 60%),
+    radial-gradient(700px 500px at 60% 30%, rgba(157, 31, 189, 0.07), transparent 60%),
+    radial-gradient(600px 450px at 60% 70%, rgba(36, 198, 33, 0.1), transparent 60%);
+  filter: blur(20px);
+  opacity: 0.9;
+  animation: drift 60s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+/* make movement obvious first; dial back after you see it */
+@keyframes drift {
+  from { transform: translate3d(0,0,0) scale(1.00); }
+  to   { transform: translate3d(10%, -6%, 0) scale(1.08); }
+}
+
+/* crank speed so you can see it */
+body::before { animation-duration: 6s; }
+
+
+
+
+
+
+
+
+
 .nav {
     padding: 1rem;
     display: flex;
