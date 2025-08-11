@@ -1,15 +1,41 @@
+import { useEffect, useRef } from "react";
 
 import placeholder from '../assets/placeholder.png'
 import placeholder2 from '../assets/placeholder-2.png'
 import placeholder3 from '../assets/placeholder-3.png'
 import placeholder4 from '../assets/placeholder-4.png'
 
-const Projects = () => {
+const Projects = ({ children }) => {
+
+    const containerRef = useRef(null);
+  const lastCardRef = useRef(null);
+
+  useEffect(() => {
+    const el = containerRef.current;
+    const last = lastCardRef.current;
+    const stickTopPx = parseFloat(
+      getComputedStyle(el).getPropertyValue("--stick-top")
+    );
+
+    const onScroll = () => {
+      const top = last.getBoundingClientRect().top;
+      // when last card’s top reaches the sticky line, lock stack
+      el.classList.toggle("stack-locked", top <= stickTopPx + 1);
+    };
+
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+
+
+
     return (
         <div>
             <h1>My Projects</h1>
 
-            <div className="projects-container">
+            <div className="projects-container" ref={containerRef} >
                 <div className="thumbnail">
                     <h2>Paid.com</h2>
                     <p>With user-centered approach, the goals was to create an intuitive interface for effortless financial management while incorporating gamification.</p>
@@ -44,7 +70,7 @@ const Projects = () => {
                         <img src={placeholder3} />
                     </div>
                 </div>
-                <div className="thumbnail">
+                <div className="thumbnail" ref={lastCardRef}>
                     <h2>Junior Portfolio</h2>
                     <p>With user-centered approach, the goals was to create an intuitive interface for effortless financial management while incorporating gamification.</p>
                     <div className='button-wrapper'>
