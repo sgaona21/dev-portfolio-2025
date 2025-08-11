@@ -20,9 +20,6 @@ function App() {
       </header>
 
       <main>
-        <Routes>
-          <Route path="/projects" element={<Projects />} />
-        </Routes>
         <TechStackOrbit />
         <Projects />
       </main>

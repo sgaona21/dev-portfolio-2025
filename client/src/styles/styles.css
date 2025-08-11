@@ -185,7 +185,6 @@ h1 {
 
 .thumbnail {
     border: 1px solid rgba(245, 245, 245, 0.081);
-    margin-bottom: 1rem;
     width: 90%;
     border-radius: 20px;
     padding: 1rem;
@@ -220,15 +219,14 @@ h1 {
   --stick-top: clamp(56px, 12vh, 120px); /* where cards pin */
   --peek: 14px;                          /* how much of each card stays visible */
   display: grid;
-  gap: 6vh;
+  gap: 1vh;
   padding-block: 20vh 40vh;
   isolation: isolate;                    /* keep z-index local */
 
-  max-width: 1100px;    /* pick your width */
+  max-width: 1400px;    /* pick your width */
   margin-inline: auto;  /* centers horizontally */
   padding-inline: 1rem; /* optional side padding */
   justify-items: center;   /* centers the children horizontally */
-
 }
 
 /* base card */
@@ -386,7 +384,7 @@ h1 {
         justify-items: start;
         height: 500px;
         padding: 3rem 2rem 3rem 2rem;
-        max-width: 900px;
+        max-width: 1000px;
     }
 
     .thumbnail > :nth-child(1) { 
@@ -415,7 +413,7 @@ h1 {
 
 
 
-        .orbit__item {
+    .orbit__item {
             background: #111111cd;
             display: flex;
             width: 75px;
@@ -424,7 +422,13 @@ h1 {
             align-items: center;
             padding: .75rem;
             margin-right: 4rem;
-        }
+    }
+
+    .projects-container {
+        gap: 3vh;
+    }
+
+                
    
     
     
