@@ -4,7 +4,19 @@
     padding: 0;
     list-style: none;
     text-decoration: none;
+    color: rgba(255, 255, 255, 0.482)
 }
+
+:root {
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+               Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+}
+
+body { font-family: var(--font-sans); }
+h1, h2 { font-weight: 600; letter-spacing: -0.02em; }
+p { font-weight: 400; line-height: 1.6; }
+
+
 
 
 body {
@@ -25,8 +37,8 @@ body::before {
   z-index: 0; /* above body background, under your content */
   background:
     radial-gradient(900px 600px at 30% 60%, rgba(255,255,255,0.07), transparent 60%),
-    radial-gradient(700px 500px at 60% 30%, rgba(157, 31, 189, 0.07), transparent 60%),
-    radial-gradient(600px 450px at 60% 70%, rgba(36, 198, 33, 0.1), transparent 60%);
+    radial-gradient(700px 500px at 60% 30%, rgba(24, 61, 179, 0.1), transparent 90%),
+    radial-gradient(600px 450px at 60% 70%, rgba(36, 198, 33, 0.1), transparent 90%);
   filter: blur(20px);
   opacity: 0.9;
   animation: drift 60s ease-in-out infinite alternate;
@@ -40,7 +52,7 @@ body::before {
 }
 
 /* crank speed so you can see it */
-body::before { animation-duration: 6s; }
+body::before { animation-duration: 5s; }
 
 
 
@@ -54,10 +66,13 @@ body::before { animation-duration: 6s; }
     padding: 1rem;
     display: flex;
     justify-content: space-between;
+    margin: auto;
+    max-width: 950px;
+    
 }
 
 .headline {
-    /* visibility: hidden; */
+    visibility: hidden;
     align-self: center;
 }
 
@@ -276,10 +291,11 @@ h1 {
 /* The black background wrapper */
 .orbit__item {
   background: #000;
-  padding: 8px;              /* space around the image */
+  padding: 1rem;  
+  margin: 2rem;            /* space around the image */
   border-radius: 12px;
   overflow: hidden;          /* keeps rounded corners clean */
-  height: 140px;             /* pick a consistent size */
+  height: 100px;             /* pick a consistent size */
   aspect-ratio: 4 / 3;       /* keeps a nice card shape */
   display: grid;             /* centers image if aspect differs */
   place-items: center;
@@ -329,12 +345,13 @@ h1 {
     .nav-links {
         display: flex;
         align-items: center;
+        
     }
 
     .nav-links a {
         margin-left: 1rem;
         text-decoration: none;
-        color: black
+        color: rgba(255, 255, 255, 0.482)
     }
 
      .nav-links a:visited {
@@ -392,6 +409,8 @@ h1 {
 
 /* Desktop View */
 @media (min-width: 1024px) { 
+
+    
 
 }
 
