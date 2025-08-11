@@ -4,9 +4,10 @@ import { useState } from 'react';
 //Components 
 import Nav from './components/Nav';
 import Overlay from './components/Overlay';
+import Projects from './components/Projects';
 
 function App() {
-  const [overlayOpen, setOverlayOpen] = useState(false)
+  const [overlayOpen, setOverlayOpen] = useState(true)
 
   const toggleOverlay = () => setOverlayOpen(prev => !prev);
 
@@ -17,7 +18,7 @@ function App() {
       </header>
 
       <main>
-
+        <Projects />
       </main>
 
       <footer>
