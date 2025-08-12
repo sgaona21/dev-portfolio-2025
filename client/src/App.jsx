@@ -1,5 +1,4 @@
 import './styles/styles.css';
-import { Routes, Route} from "react-router-dom";
 import { useState } from 'react';
 
 //Components 
