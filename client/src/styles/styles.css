@@ -284,131 +284,6 @@ h1 {
     /* so it snaps nicely at the end */
 }
 
-.projects-container .thumbnail:nth-child(1) {
-    position: sticky;
-    top: var(--stick-top);
-    background: #0b0f14;            /* keep your original color */
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, .35);
-    overflow: clip;                  /* or hidden */
-    transform: translateY(calc(var(--i, 0) * var(--peek)));
-    transition: transform 400ms ease;
-    isolation: isolate;              /* keeps blending effects contained */
-}
-
-.projects-container .thumbnail:nth-child(1)::before {
-    content: "";
-    position: absolute;
-    inset: -1px;                     /* avoids tiny gaps on edges */
-    border-radius: inherit;
-    pointer-events: none;
-
-    /* green glow concentrated in the upper-right corner */
-    background: radial-gradient(
-        350px 350px at 75% 40%,
-        rgba(0, 255, 153, 0.01) 50%,
-        rgba(0, 255, 153, 0.02) 75%,
-        transparent 110%
-    );
-
-    /* makes it feel like it's 'behind' the dark base */
-    mix-blend-mode: screen;          /* or try: lighten, color-dodge */
-}
-
-.projects-container .thumbnail:nth-child(2) {
-    position: sticky;
-    top: var(--stick-top);
-    background: #0b0f14;            /* keep your original color */
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, .35);
-    overflow: clip;                  /* or hidden */
-    transform: translateY(calc(var(--i, 0) * var(--peek)));
-    transition: transform 400ms ease;
-    isolation: isolate;              /* keeps blending effects contained */
-}
-
-.projects-container .thumbnail:nth-child(2)::before {
-    content: "";
-    position: absolute;
-    inset: -1px;                     /* avoids tiny gaps on edges */
-    border-radius: inherit;
-    pointer-events: none;
-
-    /* green glow concentrated in the upper-right corner */
-    background: radial-gradient(
-        350px 350px at 75% 40%,
-        rgba(0, 55, 255, 0.05) 50%,
-        rgba(6, 113, 244, 0.06) 75%,
-        transparent 110%
-    );
-
-    /* makes it feel like it's 'behind' the dark base */
-    mix-blend-mode: screen;          /* or try: lighten, color-dodge */
-}
-
-.projects-container .thumbnail:nth-child(3) {
-    position: sticky;
-    top: var(--stick-top);
-    background: #0b0f14;            /* keep your original color */
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, .35);
-    overflow: clip;                  /* or hidden */
-    transform: translateY(calc(var(--i, 0) * var(--peek)));
-    transition: transform 400ms ease;
-    isolation: isolate;              /* keeps blending effects contained */
-}
-
-.projects-container .thumbnail:nth-child(3)::before {
-    content: "";
-    position: absolute;
-    inset: -1px;                     /* avoids tiny gaps on edges */
-    border-radius: inherit;
-    pointer-events: none;
-
-    /* green glow concentrated in the upper-right corner */
-    background: radial-gradient(
-        350px 350px at 75% 40%,
-        rgba(255, 77, 0, 0.05) 50%,
-        rgba(244, 81, 6, 0.06) 75%,
-        transparent 110%
-    );
-
-    /* makes it feel like it's 'behind' the dark base */
-    mix-blend-mode: screen;          /* or try: lighten, color-dodge */
-}
-
-.projects-container .thumbnail:nth-child(4) {
-    position: sticky;
-    top: var(--stick-top);
-    background: #0b0f14;            /* keep your original color */
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, .35);
-    overflow: clip;                  /* or hidden */
-    transform: translateY(calc(var(--i, 0) * var(--peek)));
-    transition: transform 400ms ease;
-    isolation: isolate;              /* keeps blending effects contained */
-}
-
-.projects-container .thumbnail:nth-child(4)::before {
-    content: "";
-    position: absolute;
-    inset: -1px;                     /* avoids tiny gaps on edges */
-    border-radius: inherit;
-    pointer-events: none;
-
-    /* green glow concentrated in the upper-right corner */
-    background: radial-gradient(
-        350px 350px at 75% 40%,
-        rgba(183, 0, 255, 0.02) 50%,
-        rgba(189, 6, 244, 0.04) 75%,
-        transparent 110%
-    );
-
-    /* makes it feel like it's 'behind' the dark base */
-    mix-blend-mode: screen;          /* or try: lighten, color-dodge */
-}
-
-
 
 
 
@@ -655,6 +530,130 @@ h1 {
         padding: .75rem 1.5rem .75rem 1.5rem;
         margin-right: 2rem;
     }
+
+    .projects-container .thumbnail:nth-child(1) {
+    position: sticky;
+    top: var(--stick-top);
+    background: #0b0f14;            /* keep your original color */
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .35);
+    overflow: clip;                  /* or hidden */
+    transform: translateY(calc(var(--i, 0) * var(--peek)));
+    transition: transform 400ms ease;
+    isolation: isolate;              /* keeps blending effects contained */
+}
+
+.projects-container .thumbnail:nth-child(1)::before {
+    content: "";
+    position: absolute;
+    inset: -1px;                     /* avoids tiny gaps on edges */
+    border-radius: inherit;
+    pointer-events: none;
+
+    /* green glow concentrated in the upper-right corner */
+    background: radial-gradient(
+        350px 350px at 75% 40%,
+        rgba(0, 255, 153, 0.01) 50%,
+        rgba(0, 255, 153, 0.02) 75%,
+        transparent 110%
+    );
+
+    /* makes it feel like it's 'behind' the dark base */
+    mix-blend-mode: screen;          /* or try: lighten, color-dodge */
+}
+
+.projects-container .thumbnail:nth-child(2) {
+    position: sticky;
+    top: var(--stick-top);
+    background: #0b0f14;            /* keep your original color */
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .35);
+    overflow: clip;                  /* or hidden */
+    transform: translateY(calc(var(--i, 0) * var(--peek)));
+    transition: transform 400ms ease;
+    isolation: isolate;              /* keeps blending effects contained */
+}
+
+.projects-container .thumbnail:nth-child(2)::before {
+    content: "";
+    position: absolute;
+    inset: -1px;                     /* avoids tiny gaps on edges */
+    border-radius: inherit;
+    pointer-events: none;
+
+    /* green glow concentrated in the upper-right corner */
+    background: radial-gradient(
+        350px 350px at 75% 40%,
+        rgba(0, 55, 255, 0.05) 50%,
+        rgba(6, 113, 244, 0.06) 75%,
+        transparent 110%
+    );
+
+    /* makes it feel like it's 'behind' the dark base */
+    mix-blend-mode: screen;          /* or try: lighten, color-dodge */
+}
+
+.projects-container .thumbnail:nth-child(3) {
+    position: sticky;
+    top: var(--stick-top);
+    background: #0b0f14;            /* keep your original color */
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .35);
+    overflow: clip;                  /* or hidden */
+    transform: translateY(calc(var(--i, 0) * var(--peek)));
+    transition: transform 400ms ease;
+    isolation: isolate;              /* keeps blending effects contained */
+}
+
+.projects-container .thumbnail:nth-child(3)::before {
+    content: "";
+    position: absolute;
+    inset: -1px;                     /* avoids tiny gaps on edges */
+    border-radius: inherit;
+    pointer-events: none;
+
+    /* green glow concentrated in the upper-right corner */
+    background: radial-gradient(
+        350px 350px at 75% 40%,
+        rgba(255, 77, 0, 0.05) 50%,
+        rgba(244, 81, 6, 0.06) 75%,
+        transparent 110%
+    );
+
+    /* makes it feel like it's 'behind' the dark base */
+    mix-blend-mode: screen;          /* or try: lighten, color-dodge */
+}
+
+.projects-container .thumbnail:nth-child(4) {
+    position: sticky;
+    top: var(--stick-top);
+    background: #0b0f14;            /* keep your original color */
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .35);
+    overflow: clip;                  /* or hidden */
+    transform: translateY(calc(var(--i, 0) * var(--peek)));
+    transition: transform 400ms ease;
+    isolation: isolate;              /* keeps blending effects contained */
+}
+
+.projects-container .thumbnail:nth-child(4)::before {
+    content: "";
+    position: absolute;
+    inset: -1px;                     /* avoids tiny gaps on edges */
+    border-radius: inherit;
+    pointer-events: none;
+
+    /* green glow concentrated in the upper-right corner */
+    background: radial-gradient(
+        350px 350px at 75% 40%,
+        rgba(183, 0, 255, 0.02) 50%,
+        rgba(189, 6, 244, 0.04) 75%,
+        transparent 110%
+    );
+
+    /* makes it feel like it's 'behind' the dark base */
+    mix-blend-mode: screen;          /* or try: lighten, color-dodge */
+}
 }
 
 /* Desktop View */
