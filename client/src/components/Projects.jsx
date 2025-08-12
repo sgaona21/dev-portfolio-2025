@@ -37,8 +37,8 @@ const Projects = ({ children }) => {
 
             <div className="projects-container" ref={containerRef} >
                 <div className="thumbnail">
-                    <h2>paid-web-app</h2>
-                    <p>With user-centered approach, the goals was to create an intuitive interface for effortless financial management while incorporating gamification.</p>
+                    <h2>Paid</h2>
+                    <p>Paid is a personal project. It's a fullstack web application designed to run on desktop. It's a monthly budgeting application that tracks expenses, expendable income, and more. I built this to replace my budgeting spreadsheet.</p>
                     <div className='button-wrapper'>
                         <button>Live Site</button>
                         <button>GitHub Link</button>
