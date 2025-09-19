@@ -7,6 +7,7 @@ export default defineConfig({
   preview: {
     allowedHosts: [
       'dev-portfolio-2025-production-b166.up.railway.app'
+      ,'www.steven-gaona.dev'
     ],
     port: process.env.PORT || 4173,
     host: '0.0.0.0'
