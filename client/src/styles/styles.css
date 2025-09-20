@@ -394,6 +394,16 @@ h1 {
     padding: 1rem;
 }
 
+.orbit__track .orbit__item:nth-child(1),
+.orbit__track .orbit__item:nth-child(7) {
+    padding: 1rem;
+}
+
+.orbit__track .orbit__item:nth-child(6),
+.orbit__track .orbit__item:nth-child(12) {
+    padding: .9rem;
+}
+
 @keyframes orbit-scroll {
     to {
         transform: translateX(-50%);
