@@ -38,20 +38,17 @@ body {
     color: #e9eef2;
 }
 
-/* content sits above this */
 .main-grid {
     position: relative;
     z-index: 1;
 }
 
-/* animated glow layer */
 body::before {
     content: "";
     position: fixed;
     inset: -12%;
     pointer-events: none;
     z-index: 0;
-    /* above body background, under your content */
     background:
         radial-gradient(900px 600px at 30% 70%, rgba(176, 172, 172, 0.15), transparent 60%),
         radial-gradient(700px 500px at 50% 40%, rgba(199, 194, 194, 0.15), transparent 60%),
@@ -62,7 +59,6 @@ body::before {
     will-change: transform;
 }
 
-/* make movement obvious first; dial back after you see it */
 @keyframes drift {
     from {
         transform: translate3d(0, 0, 0) scale(1.00);
@@ -73,7 +69,6 @@ body::before {
     }
 }
 
-/* crank speed so you can see it */
 body::before {
     animation-duration: 6s;
 }
@@ -249,25 +244,16 @@ h1 {
 
 /* PROJECT CARD STACK */
 .projects-container {
-    --stick-top: clamp(56px, 12vh, 120px);
-    /* where cards pin */
-    --peek: 14px;
-    /* how much of each card stays visible */
+    --stick-top: clamp(56px, 15vh, 120px);
+    --peek: 1rem;
     display: grid;
     gap: 1vh;
     padding-block: 5vh 40vh;
     isolation: isolate;
-    /* keep z-index local */
-
     max-width: 1400px;
-    /* pick your width */
     margin-inline: auto;
-    /* centers horizontally */
     padding-inline: 1rem;
-    /* optional side padding */
     justify-items: center;
-    /* centers the children horizontally */
-    
 }
 
 /* base card */
@@ -278,21 +264,15 @@ h1 {
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, .35);
     overflow: clip;
-    /* the “peek” offset per card */
     transform: translateY(calc(var(--i, 0) * var(--peek)));
     transition: transform 400ms ease;
-    /* so it snaps nicely at the end */
 }
 
 
-
-
-/* when the last one is stuck, align all cards perfectly */
 .projects-container.stack-locked .thumbnail {
     transform: translateY(0);
 }
 
-/* ensure later cards sit over earlier ones */
 .projects-container .thumbnail:nth-child(1) {
     z-index: 1;
     --i: 0;
@@ -313,12 +293,9 @@ h1 {
     --i: 3;
 }
 
-.projects-container .thumbnail:nth-child(5) {
-    z-index: 5;
-    --i: 4;
-}
 
-/* sticky won’t work if an ancestor has overflow other than visible */
+
+
 
 
 
@@ -428,6 +405,15 @@ h1 {
 
 /***** BREAKPOINTS *****/
 
+/* MOBILE */
+
+@media (max-width: 768px) {
+    .projects-container {
+        --stick-top: 25px;
+    }
+
+}
+
 /* Tablet View */
 @media (min-width: 768px) {
 
@@ -489,27 +475,19 @@ h1 {
         grid-row: 1;
     }
 
-    /* left, row 1 */
-
     .thumbnail> :nth-child(2) {
         grid-column: 1;
         grid-row: 2 / span 3;
     }
-
-    /* left, row 2 */
 
     .thumbnail> :nth-child(3) {
         grid-column: 2;
         grid-row: 3;
     }
 
-    /* left, row 3 */
-
     .thumbnail> :nth-child(4) {
         grid-column: 2;
-        /* right half */
         grid-row: 1 / span 2
-        /* span all three rows */
     }
 
     .thumbnail h2,
@@ -544,23 +522,22 @@ h1 {
     .projects-container .thumbnail:nth-child(1) {
     position: sticky;
     top: var(--stick-top);
-    background: #0b0f14;            /* keep your original color */
+    background: #0b0f14;     
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, .35);
-    overflow: clip;                  /* or hidden */
+    overflow: clip;          
     transform: translateY(calc(var(--i, 0) * var(--peek)));
     transition: transform 400ms ease;
-    isolation: isolate;              /* keeps blending effects contained */
+    isolation: isolate;
 }
 
 .projects-container .thumbnail:nth-child(1)::before {
     content: "";
     position: absolute;
-    inset: -1px;                     /* avoids tiny gaps on edges */
+    inset: -1px;
     border-radius: inherit;
     pointer-events: none;
 
-    /* green glow concentrated in the upper-right corner */
     background: radial-gradient(
         350px 350px at 75% 40%,
         rgba(0, 255, 153, 0.01) 50%,
@@ -568,30 +545,28 @@ h1 {
         transparent 110%
     );
 
-    /* makes it feel like it's 'behind' the dark base */
-    mix-blend-mode: screen;          /* or try: lighten, color-dodge */
+    mix-blend-mode: screen;   
 }
 
 .projects-container .thumbnail:nth-child(2) {
     position: sticky;
     top: var(--stick-top);
-    background: #0b0f14;            /* keep your original color */
+    background: #0b0f14;  
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, .35);
-    overflow: clip;                  /* or hidden */
+    overflow: clip;   
     transform: translateY(calc(var(--i, 0) * var(--peek)));
     transition: transform 400ms ease;
-    isolation: isolate;              /* keeps blending effects contained */
+    isolation: isolate; 
 }
 
 .projects-container .thumbnail:nth-child(2)::before {
     content: "";
     position: absolute;
-    inset: -1px;                     /* avoids tiny gaps on edges */
+    inset: -1px;
     border-radius: inherit;
     pointer-events: none;
 
-    /* green glow concentrated in the upper-right corner */
     background: radial-gradient(
         350px 350px at 75% 40%,
         rgba(0, 55, 255, 0.05) 50%,
@@ -599,70 +574,61 @@ h1 {
         transparent 110%
     );
 
-    /* makes it feel like it's 'behind' the dark base */
-    mix-blend-mode: screen;          /* or try: lighten, color-dodge */
+    mix-blend-mode: screen; 
 }
 
 .projects-container .thumbnail:nth-child(3) {
     position: sticky;
     top: var(--stick-top);
-    background: #0b0f14;            /* keep your original color */
+    background: #0b0f14;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, .35);
-    overflow: clip;                  /* or hidden */
+    overflow: clip; 
     transform: translateY(calc(var(--i, 0) * var(--peek)));
     transition: transform 400ms ease;
-    isolation: isolate;              /* keeps blending effects contained */
+    isolation: isolate; 
 }
 
 .projects-container .thumbnail:nth-child(3)::before {
     content: "";
     position: absolute;
-    inset: -1px;                     /* avoids tiny gaps on edges */
+    inset: -1px;   
     border-radius: inherit;
     pointer-events: none;
-
-    /* green glow concentrated in the upper-right corner */
     background: radial-gradient(
         350px 350px at 75% 40%,
         rgba(255, 77, 0, 0.05) 50%,
         rgba(244, 81, 6, 0.06) 75%,
         transparent 110%
     );
-
-    /* makes it feel like it's 'behind' the dark base */
-    mix-blend-mode: screen;          /* or try: lighten, color-dodge */
+    mix-blend-mode: screen; 
 }
 
 .projects-container .thumbnail:nth-child(4) {
     position: sticky;
     top: var(--stick-top);
-    background: #0b0f14;            /* keep your original color */
+    background: #0b0f14;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, .35);
-    overflow: clip;                  /* or hidden */
+    overflow: clip;
     transform: translateY(calc(var(--i, 0) * var(--peek)));
     transition: transform 400ms ease;
-    isolation: isolate;              /* keeps blending effects contained */
+    isolation: isolate;
 }
 
 .projects-container .thumbnail:nth-child(4)::before {
     content: "";
     position: absolute;
-    inset: -1px;                     /* avoids tiny gaps on edges */
+    inset: -1px; 
     border-radius: inherit;
     pointer-events: none;
-
-    /* green glow concentrated in the upper-right corner */
     background: radial-gradient(
         350px 350px at 75% 40%,
         rgba(183, 0, 255, 0.02) 50%,
         rgba(189, 6, 244, 0.04) 75%,
         transparent 110%
     );
-
-    /* makes it feel like it's 'behind' the dark base */
-    mix-blend-mode: screen;          /* or try: lighten, color-dodge */
+    mix-blend-mode: screen;
 }
 }
 
@@ -687,5 +653,10 @@ h1 {
     .nav {
         font-size: 1.25rem;
     }
+
+}
+
+@media (min-width: 1024px) {
+
 
 }

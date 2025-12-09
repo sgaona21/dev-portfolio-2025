@@ -7,7 +7,7 @@ import placeholder4 from '../assets/placeholder-4.png'
 
 const Projects = ({ children }) => {
 
-    const containerRef = useRef(null);
+  const containerRef = useRef(null);
   const lastCardRef = useRef(null);
 
   useEffect(() => {
@@ -38,13 +38,13 @@ const Projects = ({ children }) => {
             <div className="projects-container" ref={containerRef} >
                 <div className="thumbnail">
                     <h2>Paid</h2>
-                    <p>Paid is a personal project. It's a fullstack web application designed to run on desktop. It's a monthly budgeting application that tracks expenses, expendable income, and more. I built this to replace my budgeting spreadsheet.</p>
+                    <p>Paid is a personal project. It's a fullstack web application designed to run on desktop. It's a monthly budgeting application that tracks expenses, expendable income, and more.</p>
                     <div className='button-wrapper'>
                         <button>Live Site</button>
                         <button>GitHub Link</button>
                     </div>
                     <div className='thumbnail-container'>
-                        <img src={placeholder} />
+                        <img src={placeholder} alt="thumbnail of project"/>
                     </div>
                     
                 </div>
@@ -56,7 +56,7 @@ const Projects = ({ children }) => {
                         <button>GitHub Link</button>
                     </div>
                     <div className='thumbnail-container'>
-                        <img src={placeholder2} />
+                        <img src={placeholder2} alt="thumbnail of project"/>
                     </div>
                 </div>
                 <div className="thumbnail">
@@ -67,9 +67,10 @@ const Projects = ({ children }) => {
                         <button>GitHub Link</button>
                     </div>
                     <div className='thumbnail-container'>
-                        <img src={placeholder3} />
+                        <img src={placeholder3} alt="thumbnail of project"/>
                     </div>
                 </div>
+      
                 <div className="thumbnail" ref={lastCardRef}>
                     <h2>Junior Portfolio</h2>
                     <p>With user-centered approach, the goals was to create an intuitive interface for effortless financial management while incorporating gamification.</p>
@@ -78,7 +79,7 @@ const Projects = ({ children }) => {
                         <button>GitHub Link</button>
                     </div>
                     <div className='thumbnail-container'>
-                        <img src={placeholder4} />
+                        <img src={placeholder4} alt="thumbnail of project"/>
                     </div>
                 </div>
             </div>
