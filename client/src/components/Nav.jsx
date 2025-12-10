@@ -7,6 +7,7 @@ const Nav = (props) => {
     return (
       <div className="nav">
         <div className="headline">Steven Gaona | Software Developer</div>
+        <div className="headline-mobile">Steven Gaona | Developer</div>
         <div className='nav-links-ham'>
           <div className="nav-links">
           {/* <NavLink to='#projects' >Projects</NavLink> */}
