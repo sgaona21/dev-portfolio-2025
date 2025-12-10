@@ -318,7 +318,7 @@ h1 {
 
 :root {
 	--cards: 4;
-	--cardHeight: 60vh;
+	--cardHeight: 80vh;
     --cardHeightTablet: 25vh;
 	--cardTopPadding: 2rem;
 	--cardMargin: 5vw;
