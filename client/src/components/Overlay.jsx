@@ -7,7 +7,7 @@ const Overlay = (props) => {
     return (
       <div className={props.isOpen ? "hide-overlay" : "overlay"}>
         <button className="close-overlay" type="button" onClick={props.onClose}>
-          <img src={closeIcon}/>
+          <img src={closeIcon} alt="close window icon"/>
         </button>
         <div className="overlay-nav-links">
           {/* <NavLink>Projects</NavLink> */}
