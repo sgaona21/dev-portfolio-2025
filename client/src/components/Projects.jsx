@@ -18,15 +18,16 @@ const Projects = ({ children }) => {
                     <h2>Paid</h2>
                     <p>
                         Paid is a personal project. It's a fullstack web application
-                        designed to run on desktop. It's a monthly budgeting application
-                        that tracks expenses, expendable income, and more.
+                        designed to run on desktop. This monthly budgeting application
+                        tracks expenses, expendable income, and more.
                     </p>
                     <div className="button-wrapper">
-                        <button>Live Site</button>
-                        <button><a href="https://github.com/sgaona21/paid.git" target="blank">GitHub Link</a></button>
+                        <a href="https://www.paidbudget.com/" target="_blank" rel="noopener noreferrer"><button>Live Site</button></a>
+                        <a href="https://github.com/sgaona21/paid.git" target="_blank" rel="noopener noreferrer" ><button>GitHub Link</button></a>
+                        
                     </div>
                     <div className="thumbnail-container">
-                        <img src={placeholder} alt="thumbnail of project" />
+                        <img src={placeholder} alt="thumbnail of project"/>
                     </div>    
                 </div>
             </li>
