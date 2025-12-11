@@ -11,65 +11,6 @@ const Projects = ({ children }) => {
       <div>
         <h1 id="projects">My Projects</h1>
 
-        {/* <div className="projects-container" ref={containerRef} >
-                <div className="thumbnail">
-                    <h2>Paid</h2>
-                    <p>Paid is a personal project. It's a fullstack web application designed to run on desktop. It's a monthly budgeting application that tracks expenses, expendable income, and more.</p>
-                    <div className='button-wrapper'>
-                        <button>Live Site</button>
-                        <button>GitHub Link</button>
-                    </div>
-                    <div className='thumbnail-container'>
-                        <img src={placeholder} alt="thumbnail of project"/>
-                    </div>
-                    
-                </div>
-                <div className="thumbnail">
-                    <h2>fullstack-course-manager</h2>
-                    <p>With user-centered approach, the goals was to create an intuitive interface for effortless financial management while incorporating gamification.</p>
-                    <div className='button-wrapper'>
-                        <button>Live Site</button>
-                        <button>GitHub Link</button>
-                    </div>
-                    <div className='thumbnail-container'>
-                        <img src={placeholder2} alt="thumbnail of project"/>
-                    </div>
-                </div>
-                <div className="thumbnail">
-                    <h2>PokerStatTracker</h2>
-                    <p>With user-centered approach, the goals was to create an intuitive interface for effortless financial management while incorporating gamification.</p>
-                    <div className='button-wrapper'>
-                        <button>Live Site</button>
-                        <button>GitHub Link</button>
-                    </div>
-                    <div className='thumbnail-container'>
-                        <img src={placeholder3} alt="thumbnail of project"/>
-                    </div>
-                </div>
-      
-                <div className="thumbnail" ref={lastCardRef}>
-                    <h2>Junior Portfolio</h2>
-                    <p>With user-centered approach, the goals was to create an intuitive interface for effortless financial management while incorporating gamification.</p>
-                    <div className='button-wrapper'>
-                        <button>Live Site</button>
-                        <button>GitHub Link</button>
-                    </div>
-                    <div className='thumbnail-container'>
-                        <img src={placeholder4} alt="thumbnail of project"/>
-                    </div>
-                </div>
-            </div> */}
-
-
-
-
-
-
-
-
-
-
-
         <div className="projects-container">
           <ul id="cards">
             <li className="card" id="card1">
@@ -82,7 +23,7 @@ const Projects = ({ children }) => {
                     </p>
                     <div className="button-wrapper">
                         <button>Live Site</button>
-                        <button>GitHub Link</button>
+                        <button><a href="https://github.com/sgaona21/paid.git" target="blank">GitHub Link</a></button>
                     </div>
                     <div className="thumbnail-container">
                         <img src={placeholder} alt="thumbnail of project" />
@@ -147,15 +88,6 @@ const Projects = ({ children }) => {
 
           </ul>
         </div>
-
-
-
-
-
-
-
-
-
 
       </div>
     );

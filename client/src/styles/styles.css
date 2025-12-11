@@ -7,11 +7,10 @@
     color: rgba(255, 255, 255, 0.718)
 }
 
-/* FONTS */
+/*** FONTS ***/
 :root {
     --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
         Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
-
 }
 
 body {
@@ -77,14 +76,6 @@ footer {
     height: 500px;
 }
 
-
-
-
-
-
-
-
-
 .nav {
     padding: 1rem;
     display: flex;
@@ -135,7 +126,10 @@ footer {
 
 
 
-/* OVERLAY */
+
+
+/****** OVERLAY ******/
+
 .overlay {
     background-color: black;
     position: fixed;
@@ -208,113 +202,11 @@ h1 {
     letter-spacing: 2px;
 }
 
-/* .projects-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-} */
-
-/* .thumbnail-container {
-    padding: .5rem;
-} */
-
-/* .thumbnail img {
-    width: 100%;
-    border-radius: 10px;
-} */
-
-/* .card-content img {
-    width: 100%;
-    border-radius: 10px;
-} */
-
-/* .thumbnail {
-    border: 1px solid rgba(245, 245, 245, 0.081);
-    width: 90%;
-    border-radius: 20px;
-    padding: 1rem;
-} */
-
-/* .card-content {
-    border: 1px solid rgba(245, 245, 245, 0.081);
-    width: 90%;
-    border-radius: 20px;
-    padding: 1rem;
-} */
-
-/* .thumbnail h2,
-.thumbnail p,
-.thumbnail button {
-    margin: .5rem;
-
-} */
-
-/* .card-content h2,
-.card-content p,
-.card-content button {
-    margin: .5rem;
-
-} */
-
-
-
-
-
-
 
 
 
 
 /****************** PROJECT CARD STACK ********************/
-
-/* .projects-container {
-    --stick-top: clamp(56px, 15vh, 120px);
-    --peek: 1rem;
-    display: grid;
-    gap: 1vh;
-    padding-block: 5vh 40vh;
-    isolation: isolate;
-    max-width: 1400px;
-    margin-inline: auto;
-    padding-inline: 1rem;
-    justify-items: center;
-}
-
-.projects-container .thumbnail {
-    position: sticky;
-    top: var(--stick-top);
-    background: #0b0f14;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, .35);
-    overflow: clip;
-    transform: translateY(calc(var(--i, 0) * var(--peek)));
-    transition: transform 400ms ease;
-}
-
-
-.projects-container.stack-locked .thumbnail {
-    transform: translateY(0);
-}
-
-.projects-container .thumbnail:nth-child(1) {
-    z-index: 1;
-    --i: 0;
-}
-
-.projects-container .thumbnail:nth-child(2) {
-    z-index: 2;
-    --i: 1;
-}
-
-.projects-container .thumbnail:nth-child(3) {
-    z-index: 3;
-    --i: 2;
-}
-
-.projects-container .thumbnail:nth-child(4) {
-    z-index: 4;
-    --i: 3;
-} */
 
 :root {
 	--cards: 4;
@@ -407,7 +299,8 @@ h1 {
 }
 
 
-/* CARD GRADIENT */
+/**** CARD GRADIENT *****/
+
 #card1 .card-content {
     position: relative;
     overflow: hidden;
@@ -467,9 +360,6 @@ h1 {
     z-index: 1;
 }
 
-
-
-
 #card3 .card-content {
     position: relative;
     overflow: hidden;
@@ -497,9 +387,6 @@ h1 {
     position: relative;
     z-index: 1;
 }
-
-
-
 
 #card4 .card-content {
     position: relative;
@@ -534,27 +421,7 @@ h1 {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* TECHSTACK ORBIT */
+/**** TECHSTACK ORBIT *****/
 .orbit {
     --gap: 1.25rem;
     --speed: 60s;
@@ -579,7 +446,6 @@ h1 {
     animation-play-state: paused;
 }
 
-/* The black background wrapper */
 .orbit__item {
     background: #111111cd;
     display: flex;
@@ -591,7 +457,6 @@ h1 {
     margin-right: 2rem;
 }
 
-/* The image itself */
 .orbit__item img {
     max-width: 100%;
 }
@@ -653,6 +518,7 @@ h1 {
 }
 
 /****** Tablet View ******/
+
 @media (min-width: 768px) {
 
     .headline {
@@ -770,9 +636,6 @@ h1 {
         margin-right: 3rem;
     }
 
-
-
-
     .orbit__item {
         background: #111111cd;
         display: flex;
@@ -785,218 +648,9 @@ h1 {
     }
 
 
-
-
-    /* .projects-container {
-        gap: 3vh;
-    } */
-
     .button-wrapper button {
         padding: .75rem 1.5rem .75rem 1.5rem;
     }
-
-    /* #card1 {
-    position: sticky;
-    top: var(--stick-top);
-    background: #0b0f14;     
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, .35);
-    overflow: clip;          
-    transform: translateY(calc(var(--i, 0) * var(--peek)));
-    transition: transform 400ms ease;
-    isolation: isolate;
-} */
-
-    /* #card1 {
-        background: #0b0f14;     
-        border-radius: 20px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, .35);
-    } */
-
-
-
-/* #card1::before {
-    content: "";
-    position: absolute;
-    inset: -1px;
-    border-radius: inherit;
-    pointer-events: none;
-
-    background: radial-gradient(
-        350px 350px at 75% 40%,
-        rgba(0, 255, 153, 0.01) 50%,
-        rgba(0, 255, 153, 0.02) 75%,
-        transparent 110%
-    );
-
-    mix-blend-mode: screen;   
-}  */
-
-
-
-
-
-
-
-
-
-
-
-
-/* .projects-container .thumbnail:nth-child(2) {
-    position: sticky;
-    top: var(--stick-top);
-    background: #0b0f14;  
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, .35);
-    overflow: clip;   
-    transform: translateY(calc(var(--i, 0) * var(--peek)));
-    transition: transform 400ms ease;
-    isolation: isolate; 
-} */
-
-/* #card2 {
-    background: #0b0f14;  
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, .35);
-    overflow: clip;   
-    isolation: isolate; 
-} */
-
-/* .projects-container .thumbnail:nth-child(2)::before {
-    content: "";
-    position: absolute;
-    inset: -1px;
-    border-radius: inherit;
-    pointer-events: none;
-
-    background: radial-gradient(
-        350px 350px at 75% 40%,
-        rgba(0, 55, 255, 0.05) 50%,
-        rgba(6, 113, 244, 0.06) 75%,
-        transparent 110%
-    );
-
-    mix-blend-mode: screen; 
-} */
-
-/* #card2::before {
-    content: "";
-    position: absolute;
-    inset: -1px;
-    border-radius: inherit;
-    pointer-events: none;
-
-    background: radial-gradient(
-        350px 350px at 75% 40%,
-        rgba(0, 55, 255, 0.05) 50%,
-        rgba(6, 113, 244, 0.06) 75%,
-        transparent 110%
-    );
-
-    mix-blend-mode: screen; 
-} */
-
-/* .projects-container .thumbnail:nth-child(3) {
-    position: sticky;
-    top: var(--stick-top);
-    background: #0b0f14;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, .35);
-    overflow: clip; 
-    transform: translateY(calc(var(--i, 0) * var(--peek)));
-    transition: transform 400ms ease;
-    isolation: isolate; 
-} */
-
-/* #card3 {
-    background: #0b0f14;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, .35);
-    overflow: clip; 
-    isolation: isolate; 
-} */
-
-/* .projects-container .thumbnail:nth-child(3)::before {
-    content: "";
-    position: absolute;
-    inset: -1px;   
-    border-radius: inherit;
-    pointer-events: none;
-    background: radial-gradient(
-        350px 350px at 75% 40%,
-        rgba(255, 77, 0, 0.05) 50%,
-        rgba(244, 81, 6, 0.06) 75%,
-        transparent 110%
-    );
-    mix-blend-mode: screen; 
-} */
-
-/* #card3::before {
-    content: "";
-    position: absolute;
-    inset: -1px;   
-    border-radius: inherit;
-    pointer-events: none;
-    background: radial-gradient(
-        350px 350px at 75% 40%,
-        rgba(255, 77, 0, 0.05) 50%,
-        rgba(244, 81, 6, 0.06) 75%,
-        transparent 110%
-    );
-    mix-blend-mode: screen; 
-} */
-
-/* .projects-container .thumbnail:nth-child(4) {
-    position: sticky;
-    top: var(--stick-top);
-    background: #0b0f14;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, .35);
-    overflow: clip;
-    transform: translateY(calc(var(--i, 0) * var(--peek)));
-    transition: transform 400ms ease;
-    isolation: isolate;
-} */
-
-/* #card4 {
-    background: #0b0f14;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, .35);
-    overflow: clip;
-    isolation: isolate;
-} */
-
-/* .projects-container .thumbnail:nth-child(4)::before {
-    content: "";
-    position: absolute;
-    inset: -1px; 
-    border-radius: inherit;
-    pointer-events: none;
-    background: radial-gradient(
-        350px 350px at 75% 40%,
-        rgba(183, 0, 255, 0.02) 50%,
-        rgba(189, 6, 244, 0.04) 75%,
-        transparent 110%
-    );
-    mix-blend-mode: screen;
-} */
-
-/* #card4::before {
-    content: "";
-    position: absolute;
-    inset: -1px; 
-    border-radius: inherit;
-    pointer-events: none;
-    background: radial-gradient(
-        350px 350px at 75% 40%,
-        rgba(183, 0, 255, 0.02) 50%,
-        rgba(189, 6, 244, 0.04) 75%,
-        transparent 110%
-    );
-    mix-blend-mode: screen;
-} */
-
 
 }
 
