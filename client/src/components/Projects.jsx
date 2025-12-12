@@ -17,8 +17,7 @@ const Projects = ({ children }) => {
                 <div className="card-content">
                     <h2>Paid</h2>
                     <p>
-                        Paid is a personal project. It's a fullstack web application
-                        designed to run on desktop. This monthly budgeting application
+                        Paid is a personal project. It's a fullstack web application with excel like features designed to run on desktop. This monthly budgeting application
                         tracks expenses, expendable income, and more.
                     </p>
                     <div className="button-wrapper">
