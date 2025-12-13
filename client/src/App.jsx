@@ -1,5 +1,6 @@
 import './styles/styles.css';
 import { useState } from 'react';
+import { useEffect } from "react";
 
 //Components 
 import Nav from './components/Nav';
@@ -11,6 +12,10 @@ function App() {
   const [overlayOpen, setOverlayOpen] = useState(true)
 
   const toggleOverlay = () => setOverlayOpen(prev => !prev);
+
+  useEffect(() => {
+    console.log("page loaded");
+  }, []);
 
   return (
     <div className="main-grid">
