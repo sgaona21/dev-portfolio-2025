@@ -208,7 +208,7 @@ h1 {
 
 :root {
 	--cards: 4;
-	--cardHeight: 80vh;
+	--cardHeight: 575px;
     --cardHeightTablet: 25vh;
 	--cardTopPadding: 2rem;
 	--cardMargin: 5vw;
